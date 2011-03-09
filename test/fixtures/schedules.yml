@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  opponent: MyString
+  location: MyString
+  match_date: 2011-03-07
+
+two:
+  opponent: MyString
+  location: MyString
+  match_date: 2011-03-07
