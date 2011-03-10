@@ -1,4 +1,11 @@
 Vball::Application.routes.draw do
+  get "admin/index"
+
+  get "sessions/login"
+  post "sessions/login"
+
+  resources :users
+
   resources :teams
 
   # The priority is based upon order of creation:

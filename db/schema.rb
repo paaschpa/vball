@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110309051100) do
+ActiveRecord::Schema.define(:version => 20110310025625) do
 
 # Could not dump table "matches" because of following Mysql2::Error
 #   Invalid date: BTREE
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(:version => 20110309051100) do
 #   Invalid date: BTREE
 
 # Could not dump table "teams" because of following Mysql2::Error
+#   Invalid date: BTREE
+
+# Could not dump table "users" because of following Mysql2::Error
 #   Invalid date: BTREE
 
 end
