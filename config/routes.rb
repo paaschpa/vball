@@ -3,6 +3,7 @@ Vball::Application.routes.draw do
 
   get "sessions/login"
   post "sessions/login"
+  match "/log_in" => "sessions#login", :as => "log_in"
 
   resources :users
 

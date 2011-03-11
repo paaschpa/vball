@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
-    def login
+  skip_before_filter :authorize, :only => [:login]
+
+  def login
     session[:user_id] = nil
     if request.post?
       if User.count.zero?

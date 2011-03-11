@@ -10,12 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110310025625) do
+ActiveRecord::Schema.define(:version => 20110311033039) do
 
 # Could not dump table "matches" because of following Mysql2::Error
 #   Invalid date: BTREE
 
 # Could not dump table "players" because of following Mysql2::Error
+#   Invalid date: BTREE
+
+# Could not dump table "results" because of following Mysql2::Error
 #   Invalid date: BTREE
 
 # Could not dump table "schedules" because of following Mysql2::Error

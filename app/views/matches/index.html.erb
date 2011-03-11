@@ -8,13 +8,17 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
-<% @matches.each do |match| %>
+  <% @matches.each do |match| 
+      @results = match.results
+  %>
   <tr>
-    <td><%= match.opponent %></td>
+    <td><%= match.opponent.name %></td>
     <td><%= match.location %></td>
     <td><%= match.match_date %></td>
+    <td><%= render :partial => 'results/result', :collection => match.results %></td>
     <td><%= link_to 'Show', match %></td>
     <td><%= link_to 'Edit', edit_match_path(match) %></td>
     <td><%= link_to 'Destroy', match, :confirm => 'Are you sure?', :method => :delete %></td>

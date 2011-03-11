@@ -1,6 +1,7 @@
 require  'digest/sha2'
 
 class User < ActiveRecord::Base
+  belongs_to :team
   validates :name, :presence => true, :uniqueness => true
 
   validates :password, :confirmation => true
