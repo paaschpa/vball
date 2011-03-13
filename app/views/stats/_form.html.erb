@@ -1,0 +1,93 @@
+<%= form_for(@stat) do |f| %>
+  <% if @stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stat.errors.count, "error") %> prohibited this stat from being saved:</h2>
+
+      <ul>
+      <% @stat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_id %><br />
+    <%= f.text_field :player_id %>
+  </div>
+  <div class="field">
+    <%= f.label :team_id %><br />
+    <%= f.text_field :team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :games_played %><br />
+    <%= f.text_field :games_played %>
+  </div>
+  <div class="field">
+    <%= f.label :attack_kills %><br />
+    <%= f.text_field :attack_kills %>
+  </div>
+  <div class="field">
+    <%= f.label :attack_errors %><br />
+    <%= f.text_field :attack_errors %>
+  </div>
+  <div class="field">
+    <%= f.label :attacks_total %><br />
+    <%= f.text_field :attacks_total %>
+  </div>
+  <div class="field">
+    <%= f.label :assists %><br />
+    <%= f.text_field :assists %>
+  </div>
+  <div class="field">
+    <%= f.label :block_solos %><br />
+    <%= f.text_field :block_solos %>
+  </div>
+  <div class="field">
+    <%= f.label :block_assists %><br />
+    <%= f.text_field :block_assists %>
+  </div>
+  <div class="field">
+    <%= f.label :serve_total %><br />
+    <%= f.text_field :serve_total %>
+  </div>
+  <div class="field">
+    <%= f.label :serve_aces %><br />
+    <%= f.text_field :serve_aces %>
+  </div>
+  <div class="field">
+    <%= f.label :serve_errors %><br />
+    <%= f.text_field :serve_errors %>
+  </div>
+  <div class="field">
+    <%= f.label :reception_errors %><br />
+    <%= f.text_field :reception_errors %>
+  </div>
+  <div class="field">
+    <%= f.label :reception_1 %><br />
+    <%= f.text_field :reception_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :reception_2 %><br />
+    <%= f.text_field :reception_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :reception_3 %><br />
+    <%= f.text_field :reception_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :digs %><br />
+    <%= f.text_field :digs %>
+  </div>
+  <div class="field">
+    <%= f.label :ball_handling_errors %><br />
+    <%= f.text_field :ball_handling_errors %>
+  </div>
+  <div class="field">
+    <%= f.label :block_errors %><br />
+    <%= f.text_field :block_errors %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

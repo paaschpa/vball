@@ -1,0 +1,24 @@
+<% stat_comp_key = player.id.to_s + '_' + params[:match_id] %>
+<%= form_tag('/stats/new_match_post') do %>
+<table>
+  <tr>
+    <th>Player</th>
+    <th>GP</th>
+    <th>K</th>
+  </tr>
+  <tr>
+    <td>
+      <%= text_field_tag 'stat_id__' + stat_comp_key + '__', stat_comp_key %>
+    </td>
+      <td class="field">
+        <%= text_field_tag 'games_played__' + stat_comp_key + '__'  %>
+      </td>
+      <td class="field">
+        <%= text_field_tag 'attack_kills__' + stat_comp_key + '__' %>
+      </td>
+      <td class="actions">
+        <%= submit_tag 'Save' %>
+      </td>
+    </tr>
+  </table>
+<% end %>

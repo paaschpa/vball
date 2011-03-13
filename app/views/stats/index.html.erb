@@ -1,0 +1,59 @@
+<h1>Listing stats</h1>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Team</th>
+    <th>Games played</th>
+    <th>Attack kills</th>
+    <th>Attack errors</th>
+    <th>Attacks total</th>
+    <th>Assists</th>
+    <th>Block solos</th>
+    <th>Block assists</th>
+    <th>Serve total</th>
+    <th>Serve aces</th>
+    <th>Serve errors</th>
+    <th>Reception errors</th>
+    <th>Reception 1</th>
+    <th>Reception 2</th>
+    <th>Reception 3</th>
+    <th>Digs</th>
+    <th>Ball handling errors</th>
+    <th>Block errors</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stats.each do |stat| %>
+  <tr>
+    <td><%= stat.player_id %></td>
+    <td><%= stat.team_id %></td>
+    <td><%= stat.games_played %></td>
+    <td><%= stat.attack_kills %></td>
+    <td><%= stat.attack_errors %></td>
+    <td><%= stat.attacks_total %></td>
+    <td><%= stat.assists %></td>
+    <td><%= stat.block_solos %></td>
+    <td><%= stat.block_assists %></td>
+    <td><%= stat.serve_total %></td>
+    <td><%= stat.serve_aces %></td>
+    <td><%= stat.serve_errors %></td>
+    <td><%= stat.reception_errors %></td>
+    <td><%= stat.reception_1 %></td>
+    <td><%= stat.reception_2 %></td>
+    <td><%= stat.reception_3 %></td>
+    <td><%= stat.digs %></td>
+    <td><%= stat.ball_handling_errors %></td>
+    <td><%= stat.block_errors %></td>
+    <td><%= link_to 'Show', stat %></td>
+    <td><%= link_to 'Edit', edit_stat_path(stat) %></td>
+    <td><%= link_to 'Destroy', stat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stat', new_stat_path %>

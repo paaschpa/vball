@@ -1,0 +1,43 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  player_id: 1
+  team_id: 1
+  games_played: 1
+  attack_kills: 1
+  attack_errors: 1
+  attacks_total: 1
+  assists: 1
+  block_solos: 1
+  block_assists: 1
+  serve_total: 1
+  serve_aces: 1
+  serve_errors: 1
+  reception_errors: 1
+  reception_1: 1
+  reception_2: 1
+  reception_3: 1
+  digs: 1
+  ball_handling_errors: 1
+  block_errors: 1
+
+two:
+  player_id: 1
+  team_id: 1
+  games_played: 1
+  attack_kills: 1
+  attack_errors: 1
+  attacks_total: 1
+  assists: 1
+  block_solos: 1
+  block_assists: 1
+  serve_total: 1
+  serve_aces: 1
+  serve_errors: 1
+  reception_errors: 1
+  reception_1: 1
+  reception_2: 1
+  reception_3: 1
+  digs: 1
+  ball_handling_errors: 1
+  block_errors: 1

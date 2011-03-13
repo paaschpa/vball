@@ -1,0 +1,100 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Player:</b>
+  <%= @stat.player_id %>
+</p>
+
+<p>
+  <b>Team:</b>
+  <%= @stat.team_id %>
+</p>
+
+<p>
+  <b>Games played:</b>
+  <%= @stat.games_played %>
+</p>
+
+<p>
+  <b>Attack kills:</b>
+  <%= @stat.attack_kills %>
+</p>
+
+<p>
+  <b>Attack errors:</b>
+  <%= @stat.attack_errors %>
+</p>
+
+<p>
+  <b>Attacks total:</b>
+  <%= @stat.attacks_total %>
+</p>
+
+<p>
+  <b>Assists:</b>
+  <%= @stat.assists %>
+</p>
+
+<p>
+  <b>Block solos:</b>
+  <%= @stat.block_solos %>
+</p>
+
+<p>
+  <b>Block assists:</b>
+  <%= @stat.block_assists %>
+</p>
+
+<p>
+  <b>Serve total:</b>
+  <%= @stat.serve_total %>
+</p>
+
+<p>
+  <b>Serve aces:</b>
+  <%= @stat.serve_aces %>
+</p>
+
+<p>
+  <b>Serve errors:</b>
+  <%= @stat.serve_errors %>
+</p>
+
+<p>
+  <b>Reception errors:</b>
+  <%= @stat.reception_errors %>
+</p>
+
+<p>
+  <b>Reception 1:</b>
+  <%= @stat.reception_1 %>
+</p>
+
+<p>
+  <b>Reception 2:</b>
+  <%= @stat.reception_2 %>
+</p>
+
+<p>
+  <b>Reception 3:</b>
+  <%= @stat.reception_3 %>
+</p>
+
+<p>
+  <b>Digs:</b>
+  <%= @stat.digs %>
+</p>
+
+<p>
+  <b>Ball handling errors:</b>
+  <%= @stat.ball_handling_errors %>
+</p>
+
+<p>
+  <b>Block errors:</b>
+  <%= @stat.block_errors %>
+</p>
+
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> |
+<%= link_to 'Back', stats_path %>
