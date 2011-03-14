@@ -5,20 +5,81 @@
     <th>Player</th>
     <th>GP</th>
     <th>K</th>
+    <th>E</th>
+    <th>TA</th>
+    <th>A</th>
+    <th>BS</th>
+    <th>BA</th>
+    <th>TS</th>
+    <th>SA</th>
+    <th>SE</th>
+    <th>RE</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>Digs</th>
+    <th>BE</th>
+    <th>BHE</th>
   </tr>
   <tr>
     <td>
       <%= text_field_tag 'stat_id__' + stat_comp_key + '__', stat_comp_key %>
     </td>
-      <td class="field">
-        <%= text_field_tag 'games_played__' + stat_comp_key + '__'  %>
-      </td>
-      <td class="field">
-        <%= text_field_tag 'attack_kills__' + stat_comp_key + '__' %>
-      </td>
-      <td class="actions">
-        <%= submit_tag 'Save' %>
-      </td>
-    </tr>
+    <td class="field">
+      <%= text_field_tag 'games_played__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'attack_kills__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'attack_errors__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td>
+      <%= text_field_tag 'attacks_total__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'assists__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'block_solos__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'block_assists__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'serve_total__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'serve_aces__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'serve_errors__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_errors__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_1__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_2__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_3__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'digs__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'ball_handling_errors__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'block_errors__' + stat_comp_key + '__', '', :size => 5 %>
+    </td>
+
+    <td class="actions">
+      <%= submit_tag 'Save' %>
+    </td>
+  </tr>
   </table>
 <% end %>
