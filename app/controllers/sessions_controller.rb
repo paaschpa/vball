@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         uri = session[:original_uri]
         session[:original_url] = nil
-        redirect_to(uri || {:controller => "matches", :action => "season_schedule", :team_id => user.team.id} )
+        redirect_to(uri || {:controller => "teams", :action => "show", :id => user.team.id} )
       else
         flash.now[:notice] = "Invalid user/password combination"
       end

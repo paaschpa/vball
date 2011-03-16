@@ -13,6 +13,11 @@ Vball::Application.routes.draw do
   get "stats/new_match"
   post "stats/new_match_post"
   resources :stats
+  resources :seasons
+  resources :players
+  
+  match '/matches/season_schedule' => 'matches#season_schedule'
+  resources :matches
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -28,11 +33,6 @@ Vball::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :seasons
-  resources :players
-  
-  match '/matches/season_schedule' => 'matches#season_schedule'
-  resources :matches
   
   # Sample resource route with options:
   #   resources :products do

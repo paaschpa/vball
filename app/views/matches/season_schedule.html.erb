@@ -7,8 +7,6 @@
     <th>Match date</th>
     <th>Game Results</th>
     <th>Stats</th>
-    <th></th>
-    <th></th>
   </tr>
 
   <% @matches.each do |match| %>
@@ -18,10 +16,6 @@
     <td><%= match.match_date %></td>
     <td><%= render :partial => 'results/result', :collection => match.results %></td>
     <td><%= link_to 'Enter Stats', {:controller => 'stats', :action => 'new_match', :match_id => match.id} %>
-    
-    <td><%= link_to 'Show', match %></td>
-    <td><%= link_to 'Edit', edit_match_path(match) %></td>
-    <td><%= link_to 'Destroy', match, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -29,3 +23,5 @@
 <br />
 
 <%= link_to 'New Match', new_match_path %>
+
+
