@@ -1,3 +1,6 @@
-<h1>Enter Match Statistics</h1>
-
+<% content_for :head do %>
+  <h1>Match Statistics</h1>
+<% end %>
+<strong> Versus <%= @match.opponent.name %> on <%= @match.match_date %> </strong>
+<br/><br/>
 <%= render :partial => 'player', :collection => @match.team.players %>  

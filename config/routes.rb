@@ -1,5 +1,7 @@
 Vball::Application.routes.draw do
 
+  root :to => "home#index"
+
   get "admin/index"
 
   get "sessions/login"
@@ -10,9 +12,10 @@ Vball::Application.routes.draw do
 
   resources :teams
 
-  get "stats/new_match"
-  post "stats/new_match_post"
+  match "/stats/new_match/(/:match_id)" => "stats#new_match" 
+  match "stats/new_match_post" => "stats#new_match_post", :via => "post" 
   resources :stats
+  
   resources :seasons
   resources :players
   

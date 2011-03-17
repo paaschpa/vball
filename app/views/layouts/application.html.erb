@@ -7,11 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div style="float:left;">
-    <%= image_tag("devil.gif") %>
+  <div> 
+    <%= image_tag("devil.gif", :style => "float:left") %>
+    <div style="padding-top:30px; padding-left:275px">
+      <%= yield :head %>
+    </div>
   </div>  
-  
-  <%= yield %>
-
+  <p>&nbsp;</p>
+  <div>
+    <%= yield %>
+  </div>
 </body>
 </html>
