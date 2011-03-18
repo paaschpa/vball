@@ -12,28 +12,25 @@
 
 ActiveRecord::Schema.define(:version => 20110312041643) do
 
-# Could not dump table "matches" because of following ArgumentError
-#   invalid date
+# Could not dump table "matches" because of following Mysql2::Error
+#   Invalid date: BTREE
 
-# Could not dump table "players" because of following ArgumentError
-#   invalid date
+# Could not dump table "players" because of following Mysql2::Error
+#   Invalid date: BTREE
 
-# Could not dump table "results" because of following ArgumentError
-#   invalid date
+# Could not dump table "results" because of following Mysql2::Error
+#   Invalid date: BTREE
 
-# Could not dump table "schedules" because of following ArgumentError
-#   invalid date
+# Could not dump table "seasons" because of following Mysql2::Error
+#   Invalid date: BTREE
 
-# Could not dump table "seasons" because of following ArgumentError
-#   invalid date
+# Could not dump table "stats" because of following Mysql2::Error
+#   Invalid date: BTREE
 
-# Could not dump table "stats" because of following ArgumentError
-#   invalid date
+# Could not dump table "teams" because of following Mysql2::Error
+#   Invalid date: BTREE
 
-# Could not dump table "teams" because of following ArgumentError
-#   invalid date
-
-# Could not dump table "users" because of following ArgumentError
-#   invalid date
+# Could not dump table "users" because of following Mysql2::Error
+#   Invalid date: BTREE
 
 end

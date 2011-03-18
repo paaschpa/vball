@@ -1,5 +1,6 @@
 Vball::Application.routes.draw do
   root :to => "home#index"
+  match "/home/index/(/:id)" => "home#index"
 
   get "admin/index"
 

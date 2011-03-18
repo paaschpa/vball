@@ -14,7 +14,7 @@
       <% end %>
       <p>&nbsp;</p>
 
-      <%= link_to('Complete schedule', {:controller => 'matches', :action => 'season_schedule', :team_id => 1}) %>
+      <%= link_to('Complete schedule', {:controller => 'matches', :action => 'season_schedule', :team_id => @team.id }) %>
     </td>
   </tr>
 </table>
