@@ -3,4 +3,32 @@
 <% end %>
 <strong> Versus <%= @match.opponent.name %> on <%= @match.match_date %> </strong>
 <br/><br/>
-<%= render :partial => 'player', :collection => @match.team.players %>  
+
+<%= form_tag('/stats/new_match_post') do %>
+  <table>
+  <tr>
+    <th>Player</th>
+    <th>GP</th>
+    <th>K</th>
+    <th>E</th>
+    <th>TA</th>
+    <th>A</th>
+    <th>BS</th>
+    <th>BA</th>
+    <th>TS</th>
+    <th>SA</th>
+    <th>SE</th>
+    <th>RE</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>Digs</th>
+    <th>BE</th>
+    <th>BHE</th>
+  </tr>
+
+  <%= render :partial => 'player', :collection => @match.team.players %>  
+
+</table>
+  <%= submit_tag 'Save' %>
+<% end %>
