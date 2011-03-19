@@ -1,8 +1,8 @@
    <tr>
     <td>
-      <% stat_comp_key = player.id.to_s + '_' + params[:match_id] %>
-      <%= hidden_field 'stat_id__' + stat_comp_key + '__', stat_comp_key %>
-      <%= player.first_name + ' ' + player.last_name %>  
+      <% stat_comp_key = stat.player.id.to_s + '_' + params[:match_id] %>
+      <%= hidden_field_tag 'stat_id__' + stat_comp_key + '__', stat_comp_key %>
+      <%= stat.player.first_name + ' ' + stat.player.last_name %>  
     </td>
     <td class="field">
       <%= text_field_tag 'games_played__' + stat_comp_key + '__', '', :size => 3 %>
@@ -55,5 +55,4 @@
     <td class="field">
       <%= text_field_tag 'block_errors__' + stat_comp_key + '__', '', :size => 3 %>
     </td>
-
   </tr>

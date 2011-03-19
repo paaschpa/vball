@@ -2,6 +2,7 @@ class StatsController < ApplicationController
   
   def new_match
     @match = Match.find(params[:match_id])
+    @stats = Stat.includes(:player).where(:match_id => params[:match_id])
   end
 
   def new_match_post
