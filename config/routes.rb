@@ -14,13 +14,16 @@ Vball::Application.routes.draw do
 
   match "/stats/new_match/(/:match_id)" => "stats#new_match" 
   match "stats/new_match_post" => "stats#new_match_post", :via => "post" 
+  match "/stats/match_stats/(/:match_id)" => "stats#match_stats"
   resources :stats
   
   resources :seasons
   resources :players
   
   match '/matches/season_schedule' => 'matches#season_schedule'
-  resources :matches
+  resources :matches do 
+    resources :stats
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

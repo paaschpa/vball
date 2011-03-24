@@ -1,7 +1,8 @@
 class StatsController < ApplicationController
-  
+
   def new_match
     @match = Match.find(params[:match_id])
+    @players = Player.where(:team_id => @match.team.id)
     @stats = Stat.includes(:player).where(:match_id => params[:match_id])
   end
 
@@ -18,10 +19,14 @@ class StatsController < ApplicationController
     stats_models.each_value {|model| model.save}
   end
 
+  def match_stats
+    @match_stats = Stat.where(:match_id => params[:match_id])
+  end
+
   # GET /stats
   # GET /stats.xml
   def index
-    @stats = Stat.all
+    @stats = Stat.where(:match_id => params[:match_id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -115,4 +120,8 @@ class StatsController < ApplicationController
     end
   end
 
+  def sum_stat_field(stat_field_name)
+    @stats.inject(0) { |s, v| s + v[stat_field_name] }
+  end
+  helper_method :sum_stat_field
 end

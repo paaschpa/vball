@@ -1,0 +1,59 @@
+   <tr>
+    <td>
+      <% stat_comp_key = player.id.to_s + '_' + params[:match_id] %>
+      <% stat = @stats.select {|v| v.player.id == player.id}%>
+      <%= hidden_field_tag 'stat_id__' + stat_comp_key + '__', stat_comp_key %>
+      <%= player.first_name + ' ' + player.last_name %>  
+    </td>
+    <td class="field">
+      <%= text_field_tag 'games_played__' + stat_comp_key + '__', stat[0].games_played, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'attack_kills__' + stat_comp_key + '__', stat[0].attack_kills, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'attack_errors__' + stat_comp_key + '__', stat[0].attack_errors, :size => 3 %>
+    </td>
+    <td>
+      <%= text_field_tag 'attacks_total__' + stat_comp_key + '__', stat[0].attacks_total, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'assists__' + stat_comp_key + '__', stat[0].assists, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'block_solos__' + stat_comp_key + '__', stat[0].block_solos, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'block_assists__' + stat_comp_key + '__', stat[0].block_assists, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'serve_total__' + stat_comp_key + '__', stat[0].serve_total, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'serve_aces__' + stat_comp_key + '__', stat[0].serve_aces, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'serve_errors__' + stat_comp_key + '__', stat[0].serve_errors, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_errors__' + stat_comp_key + '__', stat[0].reception_errors, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_1__' + stat_comp_key + '__', stat[0].reception_1, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_2__' + stat_comp_key + '__', stat[0].reception_2, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'reception_3__' + stat_comp_key + '__', stat[0].reception_3, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'digs__' + stat_comp_key + '__', stat[0].digs, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'ball_handling_errors__' + stat_comp_key + '__', stat[0].ball_handling_errors, :size => 3 %>
+    </td>
+    <td class="field">
+      <%= text_field_tag 'block_errors__' + stat_comp_key + '__', stat[0].block_errors, :size => 3 %>
+    </td>
+  </tr>

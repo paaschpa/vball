@@ -3,11 +3,11 @@
 <table>
   <tr>
     <th>Player</th>
-    <th>Team</th>
     <th>Games played</th>
     <th>Attack kills</th>
     <th>Attack errors</th>
     <th>Attacks total</th>
+    <th>Attack %</th>
     <th>Assists</th>
     <th>Block solos</th>
     <th>Block assists</th>
@@ -28,12 +28,12 @@
 
 <% @stats.each do |stat| %>
   <tr>
-    <td><%= stat.player_id %></td>
-    <td><%= stat.team_id %></td>
+    <td><%= stat.player.first_name + ' ' + stat.player.last_name %></td>
     <td><%= stat.games_played %></td>
     <td><%= stat.attack_kills %></td>
     <td><%= stat.attack_errors %></td>
     <td><%= stat.attacks_total %></td>
+    <td><%= number_to_percentage((stat.attack_kills.to_f - stat.attack_errors.to_f) / stat.attacks_total.to_f, :precision => 2)  %></td>
     <td><%= stat.assists %></td>
     <td><%= stat.block_solos %></td>
     <td><%= stat.block_assists %></td>
@@ -47,13 +47,27 @@
     <td><%= stat.digs %></td>
     <td><%= stat.ball_handling_errors %></td>
     <td><%= stat.block_errors %></td>
-    <td><%= link_to 'Show', stat %></td>
-    <td><%= link_to 'Edit', edit_stat_path(stat) %></td>
-    <td><%= link_to 'Destroy', stat, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  <tr>
+    <td>Totals</td>
+    <td></td>
+    <td><%= sum_stat_field(:attack_kills) %></td> <td><%= sum_stat_field(:attack_errors) %></td> <td><%= sum_stat_field(:attacks_total) %></td>
+    <td></td>
+    <td><%= sum_stat_field(:assists) %></td>
+    <td><%= sum_stat_field(:block_solos) %></td>
+    <td><%= sum_stat_field(:block_assists) %></td>
+    <td><%= sum_stat_field(:serve_total) %></td>
+    <td><%= sum_stat_field(:serve_aces) %></td>
+    <td><%= sum_stat_field(:serve_errors) %></td>
+    <td><%= sum_stat_field(:reception_errors) %></td>
+    <td><%= sum_stat_field(:reception_1) %></td>
+    <td><%= sum_stat_field(:reception_2) %></td>
+    <td><%= sum_stat_field(:reception_3) %></td>
+    <td><%= sum_stat_field(:digs) %></td>
+    <td><%= sum_stat_field(:ball_handling_errors) %></td>
+    <td><%= sum_stat_field(:block_errors) %></td>
+  </tr>
 </table>
 
 <br />
-
-<%= link_to 'New Stat', new_stat_path %>
