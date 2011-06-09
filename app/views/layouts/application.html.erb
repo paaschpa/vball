@@ -6,16 +6,44 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
+
 <body>
-  <div> 
-    <%= image_tag("devil.gif", :style => "float:left") %>
-    <div style="padding-top:30px; padding-left:275px">
-      <%= yield :head %>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="#">Volleyball Stats</a></h1>
+      <h2><%= yield :head %></h2>
     </div>
-  </div>  
-  <p>&nbsp;</p>
-  <div>
-    <%= yield %>
+
+    <div id="menu">
+      <ul>
+        <li>MENU</li>
+      </ul>
+    </div>
+
+    <div id="top"></div>
+
+    <div id="contentwrap">
+
+      <div id="sidebar">
+        <h3>Menu Navigation</h3>
+        <ul>
+          <li><a href="#">Menu Nav</a></li>
+        </ul>
+      </div>
+   
+      <div id="content">
+        Content
+        <%= yield %>
+      </div>
+
+    <div style="clear: both;"></div>
+
+    </div>
+
+    <div id="footer">
+      FOOTER
+    </div>
+
   </div>
 </body>
 </html>

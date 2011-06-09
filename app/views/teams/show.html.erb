@@ -1,24 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @team.name %></h1>
+<% content_for :head do %>
+  <%= @team.name %>
+<% end %>
 
-<div style="margin-left:250px">
-<p>
-  <b>Conference:</b>
-  <%= @team.conference %>
-</p>
+  current season: <%= @team.current_season.year %><br/><br/>
+  upcoming matches
+  <% @team.current_season.upcoming_matches.each do |match| %>
+    <%= match.match_date %> - <%= match.opponent.name %>  
+  <% end %>
 
-<p>
-  <b>Address:</b>
-  <%= @team.address %>
-</p>
+  previous seasons
 
-</div>
-
-<div style="margin-left:250px;padding-top:25px;">
   <% total_kills = 0 %>
     <% @team.players.each do |player| %>
       <% total_kills += player.stats.inject(0) {|sum, stat| sum ? sum + stat.attack_kills : stat.attack_kills } %>
     <% end %>
   Total Kills <%= total_kills %>
-</div>

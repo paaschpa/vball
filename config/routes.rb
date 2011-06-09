@@ -1,29 +1,11 @@
 Vball::Application.routes.draw do
-  root :to => "home#index"
-  match "/home/index/(/:id)" => "home#index"
+  root :to => "sessions#login"
 
-  get "admin/index"
-
-  get "sessions/login"
-  post "sessions/login"
-  match "/log_in" => "sessions#login", :as => "log_in"
-
-  resources :users
+  match "/login" => "sessions#login"
 
   resources :teams
-
-  match "/stats/new_match/(/:match_id)" => "stats#new_match" 
-  match "stats/new_match_post" => "stats#new_match_post", :via => "post" 
-  match "/stats/match_stats/(/:match_id)" => "stats#match_stats"
-  resources :stats
-  
-  resources :seasons
   resources :players
-  
-  match '/matches/season_schedule' => 'matches#season_schedule'
-  resources :matches do 
-    resources :stats
-  end
+  resources :matches
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

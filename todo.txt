@@ -1,0 +1,6 @@
+login page -> users team listing
+
+click team -> top stats + upcoming matches + past seasons
+
+player show seasons + top stats (by position?)
+
