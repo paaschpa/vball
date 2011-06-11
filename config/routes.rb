@@ -4,6 +4,7 @@ Vball::Application.routes.draw do
   match "/login" => "sessions#login"
 
   resources :teams
+  resources :seasons
   resources :players
   resources :matches
 

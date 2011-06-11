@@ -13,7 +13,8 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.xml
   def show
-    @team = Team.includes(:players => :stats).find(params[:id])
+    @team = Team.find(params[:id])
+    session[:current_season] = @team.current_season
 
     respond_to do |format|
       format.html # show.html.erb

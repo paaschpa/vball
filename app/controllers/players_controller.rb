@@ -2,7 +2,7 @@ class PlayersController < ApplicationController
   # GET /players
   # GET /players.xml
   def index
-    @players = Player.all
+    @players = Season.find(params[:season_id]).players 
 
     respond_to do |format|
       format.html # index.html.erb

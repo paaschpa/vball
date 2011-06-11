@@ -11,7 +11,7 @@
   <div id="wrap">
     <div id="header">
       <h1><a href="#">Volleyball Stats</a></h1>
-      <h2><%= yield :head %></h2>
+      <h2><%= user_team().name %></h2>
     </div>
 
     <div id="menu">
@@ -23,11 +23,10 @@
     <div id="top"></div>
 
     <div id="contentwrap">
-
       <div id="sidebar">
-        <h3>Menu Navigation</h3>
         <ul>
-          <li><a href="#">Menu Nav</a></li>
+          <li><%= link_to("Players", { :controller => "players", :action => "index", :season_id => session[:current_season]} ) %></li>
+          <li><%= link_to("Past Seasons", { :controller => "seasons", :action => "index", :team_id => user_team().id } ) %></li>
         </ul>
       </div>
    
