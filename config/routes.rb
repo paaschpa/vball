@@ -5,8 +5,11 @@ Vball::Application.routes.draw do
 
   resources :teams
   resources :seasons
+  match "/seasons/season_change" => "seasons#season_change"
+  
   resources :players
   resources :matches
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

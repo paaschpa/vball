@@ -8,6 +8,21 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#team_seasons").change(
+          function(e)
+          {
+            $.ajax({
+              url: "/seasons/season_change",
+              type: "POST",
+              data: {season:$(this).val()}    
+            })
+          }
+        );
+    });
+  </script>
+  
   <div id="wrap">
     <div id="header">
       <h1><a href="#">Volleyball Stats</a></h1>
@@ -24,6 +39,7 @@
 
     <div id="contentwrap">
       <div id="sidebar">
+        Season: <%= select_tag("team_seasons", options_from_collection_for_select(team_seasons(user_team().id), "id", "year")) %>
         <ul>
           <li><%= link_to("Players", { :controller => "players", :action => "index", :season_id => session[:current_season]} ) %></li>
           <li><%= link_to("Past Seasons", { :controller => "seasons", :action => "index", :team_id => user_team().id } ) %></li>
@@ -31,7 +47,6 @@
       </div>
    
       <div id="content">
-        Content
         <%= yield %>
       </div>
 

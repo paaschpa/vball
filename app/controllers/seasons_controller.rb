@@ -9,4 +9,10 @@ class SeasonsController < ApplicationController
     end
   end
 
+  def season_change
+    session[:current_season] = params[:season]
+    results = "changed"
+    render :text=>results.to_json
+  end
+
 end
